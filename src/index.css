@@ -7,14 +7,26 @@
   --operator-color: #e66a6a;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-color: var(--bg-color);
   font-family: 'Inter', -apple-system, sans-serif;
   color: var(--text-color);
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 12px;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
 }
