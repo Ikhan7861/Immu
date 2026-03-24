@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import immuLogo from './assets/immu.jpg';
 
 function App() {
   const [currentOperand, setCurrentOperand] = useState('0');
@@ -113,6 +114,10 @@ function App() {
 
   return (
     <div className="calculator">
+      <div className="creator-header">
+        <img src={immuLogo} alt="Immu" className="creator-logo" />
+        <span className="creator-name">Created by <strong>Immu</strong></span>
+      </div>
       <div className="display">
         <div className="previous-operand">
           {previousOperand} {operation && (operation === '/' ? '÷' : operation === '*' ? '×' : operation === '-' ? '−' : operation)}
